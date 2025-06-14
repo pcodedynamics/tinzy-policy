@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinzy - Đọc báo chỉ cần lướt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            color: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container {
+            max-width: 800px;
+            width: 98%;
+            margin: 40px auto;
+            background: rgba(30, 41, 59, 0.92);
+            border-radius: 28px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 44px 32px 36px 32px;
+            position: relative;
+            text-align: center;
+        }
+        .ai-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .ai-icon svg {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 0 16px #00ffe7cc);
+        }
+        h1 {
+            color: #00ffe7;
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            color: #7cf6ff;
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+        }
+        .desc {
+            font-size: 1.13rem;
+            margin-bottom: 28px;
+            color: #e3e3e3;
+        }
+        .features, .reasons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+            margin: 36px 0 18px 0;
+        }
+        .feature, .reason {
+            background: rgba(0,255,231,0.08);
+            border: 1px solid #00ffe7;
+            border-radius: 16px;
+            padding: 18px 20px;
+            min-width: 200px;
+            max-width: 260px;
+            flex: 1 1 200px;
+            color: #e3e3e3;
+            box-shadow: 0 2px 8px #00ffe722;
+            text-align: left;
+            font-size: 1.05rem;
+        }
+        .feature-title, .reason-title {
+            color: #00ffe7;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .feature-title span, .reason-title span {
+            font-size: 1.2em;
+        }
+        .section-title {
+            color: #7cf6ff;
+            font-size: 1.18rem;
+            margin: 32px 0 10px 0;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .cta-btn {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 16px 44px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f2027;
+            background: linear-gradient(90deg, #00ffe7 0%, #7cf6ff 100%);
+            border: none;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px #00ffe766;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(90deg, #7cf6ff 0%, #00ffe7 100%);
+            color: #1a2a3a;
+            transform: scale(1.04);
+        }
+        .links {
+            margin-top: 32px;
+            font-size: 1rem;
+        }
+        .links a {
+            color: #7cf6ff;
+            margin: 0 10px;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .links a:hover {
+            color: #00ffe7;
+        }
+        footer {
+            width: 100%;
+            margin-top: auto;
+            text-align: center;
+            color: #7cf6ff;
+            font-size: 1rem;
+            opacity: 0.85;
+            letter-spacing: 0.2px;
+            padding: 18px 0 10px 0;
+        }
+        footer a {
+            color: #00ffe7;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 18px 6px; }
+            h1 { font-size: 1.4rem; }
+            .features, .reasons { flex-direction: column; gap: 12px; }
+            .feature, .reason { min-width: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="container">
+        <div class="ai-icon">
+            <!-- AI/robot icon SVG -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="30" fill="#1a2a3a" stroke="#00ffe7" stroke-width="3"/>
+                <ellipse cx="32" cy="38" rx="18" ry="10" fill="#222e3c" stroke="#00ffe7" stroke-width="2"/>
+                <ellipse cx="24" cy="32" rx="4" ry="6" fill="#00ffe7"/>
+                <ellipse cx="40" cy="32" rx="4" ry="6" fill="#00ffe7"/>
+                <rect x="28" y="44" width="8" height="4" rx="2" fill="#00ffe7"/>
+                <circle cx="20" cy="24" r="2" fill="#7cf6ff"/>
+                <circle cx="44" cy="24" r="2" fill="#7cf6ff"/>
+            </svg>
+        </div>
+        <h1>Tinzy - Đọc báo chỉ cần lướt</h1>
+        <div class="subtitle">Đọc báo kiểu mới - lướt để khám phá tin tức nhanh, đúng gu. Lướt là mê!</div>
+        <div class="desc">
+            Tinzy – Đọc báo kiểu mới, chỉ cần lướt là thấy tin hay!<br>
+            Đã đến lúc bỏ qua cách đọc báo nhàm chán. Với giao diện hiện đại, mượt mà cùng trải nghiệm lướt liên tục như mạng xã hội, Tinzy mang đến một cách tiếp cận tin tức hoàn toàn mới, phù hợp với nhịp sống hiện đại và người dùng thế hệ số.
+        </div>
+        <div class="section-title">🌟 Các tính năng nổi bật:</div>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-title"><span>🚀</span> Lướt tin không giới hạn</div>
+                Trải nghiệm đọc báo gây nghiện như lướt mạng xã hội. Màn hình chính liên tục cập nhật những bài báo mới nhất, nóng hổi nhất để bạn không bao giờ bỏ lỡ bất kỳ tin tức quan trọng nào.
+            </div>
+            <div class="feature">
+                <div class="feature-title"><span>📰</span> Khám phá đa chiều</div>
+                Dễ dàng xem tin tức theo các danh mục được sắp xếp thông minh: Thời sự, Kinh doanh, Công nghệ, Giải trí, Thể thao và nhiều hơn nữa. Mọi góc nhìn của thế giới đều nằm trong tay bạn.
+            </div>
+            <div class="feature">
+                <div class="feature-title"><span>🔍</span> Tìm kiếm thông minh</div>
+                Tìm kiếm bất kỳ bài báo nào bạn cần một cách nhanh chóng. Đặc biệt, Tinzy còn bắt trend cực nhanh với các gợi ý từ khóa thịnh hành của Google Trending ngay trong ứng dụng.
+            </div>
+            <div class="feature">
+                <div class="feature-title"><span>🏛️</span> Theo dõi nguồn tin yêu thích</div>
+                Dễ dàng đọc tin tức từ các nhà báo, trang tin, nhà xuất bản mà bạn tin tưởng. Quản lý các nguồn tin của bạn ở một nơi duy nhất.
+            </div>
+            <div class="feature">
+                <div class="feature-title"><span>🔖</span> Lưu lại để đọc sau</div>
+                Tâm đắc một bài viết nhưng chưa có thời gian đọc? Lưu lại chỉ với một chạm và truy cập lại bất cứ lúc nào trong màn hình "Đã lưu".
+            </div>
+        </div>
+        <div class="section-title">✨ Tại sao bạn sẽ thích Tinzy?</div>
+        <div class="reasons">
+            <div class="reason">
+                <div class="reason-title"><span>✅</span> Đọc báo kiểu mới – chỉ cần lướt</div>
+                Không cần tìm kiếm hay cuộn trang dài dòng. Mỗi lượt vuốt là một bài báo mới, cập nhật nóng hổi, đúng gu của bạn.
+            </div>
+            <div class="reason">
+                <div class="reason-title"><span>✅</span> Trải nghiệm mượt mà, giao diện tinh tế</div>
+                Thiết kế tối giản, dễ sử dụng và bắt mắt giúp bạn đọc báo thoải mái mọi lúc mọi nơi.
+            </div>
+            <div class="reason">
+                <div class="reason-title"><span>✅</span> Tin tức cá nhân hóa</div>
+                Dựa trên hành vi đọc và sở thích của bạn, Tinzy sẽ dần đề xuất nội dung phù hợp hơn theo thời gian.
+            </div>
+            <div class="reason">
+                <div class="reason-title"><span>🔒</span> Bảo mật & quyền riêng tư</div>
+                Tinzy tôn trọng quyền riêng tư của bạn. Mọi hành vi sử dụng được xử lý ẩn danh, không cần đăng nhập!
+            </div>
+        </div>
+        <a class="cta-btn" href="#">Tải Tinzy ngay</a>
+        <div class="links">
+            <a href="privacy.html">Chính sách quyền riêng tư</a> |
+            <a href="mailto:developer@pcode.software">Liên hệ</a>
+        </div>
+    </div>
+    <footer style="width:100%;margin-top:auto;text-align:center;color:#7cf6ff;font-size:1rem;opacity:0.85;letter-spacing:0.2px;padding:18px 0 10px 0;">
+        © 2025 P-Code Dynamics &nbsp;|&nbsp; <a href="mailto:developer@pcode.software" style="color:#00ffe7;text-decoration:underline;">developer@pcode.software</a>
+    </footer>
+</body>
+</html>
